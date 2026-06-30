@@ -239,13 +239,13 @@ export default function Page() {
                           <div className="flex justify-between text-[10px] mb-1">
                             <span className="text-gray-500">Progress</span>
                             <span className="text-emerald-600 font-medium">
-                              85%
+                              15%
                             </span>
                           </div>
                           <div className="h-1.5 rounded-full bg-gray-200 overflow-hidden">
                             <motion.div
                               initial={{ width: 0 }}
-                              animate={{ width: "85%" }}
+                              animate={{ width: "15%" }}
                               transition={{ duration: 1.5, delay: 0.8 }}
                               className="h-full bg-linear-to-r from-emerald-400 to-green-500 rounded-full"
                             />
