@@ -1,12 +1,8 @@
-// app/page.tsx
 "use client";
 
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Input } from "@/components/ui/input";
 import {
   Sparkles,
-  ArrowRight,
   Clock,
   CheckCircle2,
   Zap,
@@ -31,25 +27,16 @@ import {
   FileText,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
 
 export default function Page() {
-  const [email, setEmail] = useState("");
 
   return (
-    <main className="min-h-screen h-screen bg-linear-to-br from-emerald-50 via-white to-teal-50/50 overflow-hidden flex items-center justify-center p-4 relative">
-      {/* Fresh Animated Background */}
+    <main className="min-h-screen lg:h-screen bg-linear-to-br from-emerald-50 via-white to-teal-50/50 overflow-hidden flex items-center justify-center p-4 relative">
       <div className="fixed inset-0 -z-10 overflow-hidden">
-        {/* Blob 1 */}
         <div className="absolute -top-10 -left-10 h-96 w-96 rounded-full bg-emerald-200/40 blur-3xl animate-blob" />
-
-        {/* Blob 2 */}
         <div className="absolute -top-10 -right-10 h-96 w-96 rounded-full bg-green-200/40 blur-3xl animate-blob animation-delay-2000" />
-
-        {/* Blob 3 */}
         <div className="absolute -bottom-10 left-20 h-96 w-96 rounded-full bg-teal-200/40 blur-3xl animate-blob animation-delay-4000" />
 
-        {/* Grid Pattern */}
         <div
           className="absolute inset-0 opacity-10"
           style={{
@@ -67,10 +54,7 @@ export default function Page() {
           transition={{ duration: 0.6 }}
           className="bg-white/90 backdrop-blur-2xl border border-white/50 shadow-2xl shadow-emerald-500/10 rounded-3xl p-6 md:p-8 lg:p-10"
         >
-
-          {/* Main Content */}
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-            {/* Left Content */}
             <div className="space-y-6">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -87,12 +71,11 @@ export default function Page() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1]"
+                className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] flex flex-wrap gap-2.5"
               >
                 <span className="text-gray-800">Coming</span>
-                <br />
                 <span className="bg-linear-to-r from-emerald-500 via-green-500 to-emerald-500 bg-clip-text text-transparent animate-gradient bg-size-[200%_200%]">
-                  Soon
+                  Soon...
                 </span>
               </motion.h1>
 
@@ -108,7 +91,6 @@ export default function Page() {
                 </span>
               </motion.p>
 
-              {/* Stats */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -136,32 +118,6 @@ export default function Page() {
                 ))}
               </motion.div>
 
-              {/* CTA */}
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
-                className="flex items-center gap-3 max-w-md"
-              >
-                <div className="flex-1 relative">
-                  <Input
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="bg-white border-emerald-200 text-gray-800 placeholder:text-gray-400 rounded-full h-11 px-5 focus:ring-2 focus:ring-emerald-500/50 focus:border-emerald-500"
-                  />
-                </div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Button className="bg-linear-to-r from-emerald-500 to-green-500 hover:from-emerald-600 hover:to-green-600 text-white rounded-full px-6 h-11 shadow-lg shadow-emerald-500/30">
-                    Notify
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  </Button>
-                </motion.div>
-              </motion.div>
-
               <motion.p
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
@@ -169,11 +125,10 @@ export default function Page() {
                 className="text-gray-400 text-xs flex items-center gap-2"
               >
                 <Clock className="h-3 w-3" />
-                Get notified when we launch. We promise not to spam you.
+                Currently in development. Stay tuned for updates!
               </motion.p>
             </div>
 
-            {/* Right - Fresh Monitor */}
             <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={{ opacity: 1, x: 0 }}
@@ -297,7 +252,6 @@ export default function Page() {
                           </div>
                         </div>
 
-                        {/* Features */}
                         <div className="grid grid-cols-4 gap-1.5">
                           {[
                             { icon: QrCode, label: "QR" },
@@ -317,7 +271,6 @@ export default function Page() {
                           ))}
                         </div>
 
-                        {/* Status */}
                         <div className="flex items-center justify-between text-[9px] text-gray-500 bg-gray-50 rounded-lg px-3 py-1.5 border border-gray-200/50">
                           <div className="flex items-center gap-2">
                             <div className="flex gap-0.5">
@@ -332,7 +285,6 @@ export default function Page() {
                           </span>
                         </div>
 
-                        {/* Nav */}
                         <div className="flex items-center justify-between pt-2 border-t border-gray-200/50">
                           <div className="flex items-center gap-3">
                             {[Home, PieChart, FileText].map((Icon, i) => (
